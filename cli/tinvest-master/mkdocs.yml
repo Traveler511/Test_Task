@@ -1,0 +1,43 @@
+site_name: Tinvest
+site_url: https://daxartio.github.io/tinvest/
+site_description: 'Данный проект представляет собой инструментарий на языке Python для работы с OpenAPI Тинькофф Инвестиции, который можно использовать для создания торговых роботов.'
+
+repo_name: 'tinvest'
+repo_url: 'https://github.com/daxartio/tinvest'
+
+copyright: 'Copyright &copy; 2020 Tinvest'
+
+nav:
+  - 'Главная': 'README.md'
+  - 'CLI': cli.md
+  - 'API Reference':
+    - clients.py: tinvest/clients.md
+    - streaming.py: tinvest/streaming.md
+  - 'Changelog': CHANGELOG.md
+
+theme:
+  name: material
+  language: ru
+  palette:
+    primary: black
+    accent: yellow
+
+plugins:
+- search:
+    lang: ru
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        rendering:
+          show_source: false
+    watch:
+      - tinvest
+
+extra_css:
+  - custom.css
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences

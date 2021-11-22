@@ -1,0 +1,141 @@
+.form {
+    $w: 70%;
+    $borderColor: black;
+    $color: white;
+    width: 450px;
+    border: 3px solid white;
+    border-radius: 15px;
+    text-align: center;
+
+    &__element {
+        margin: 30px;
+    }
+
+    textarea {
+        border: 1px solid $borderColor;
+        border-radius: 15px;
+        padding: 10px;
+        width: $w;
+    }
+
+    select {
+        border: 1px solid $borderColor;
+        border-radius: 15px;
+        padding: 5px;
+        width: $w;
+        text-align: center;
+    }
+
+    select:disabled {
+        color: rgb(71, 71, 71);
+    }
+    input {
+        border: 1px solid $borderColor;
+        border-radius: 15px;
+        padding: 5px;
+        width: $w;
+        margin-top: 5px;
+    }
+    button {
+        border: 1px solid $borderColor;
+        border-radius: 15px;
+        padding: 5px 12px 5px 12px;
+        background: linear-gradient(140deg, #508ae7, #349c53);
+        color: $color;
+        transition: 0.2s;
+    }
+    button:disabled {
+        background-color: rgba(233, 233, 233, 0.438);
+        opacity: 0.55;
+        pointer-events: none;
+    }
+    button:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+    .theme {
+        input {
+            text-align: center;
+        }
+    }
+    &__input {
+        border: 1px solid $borderColor;
+        border-radius: 15px;
+        margin: 0 auto;
+        width: $w;
+        padding: 0 5px 5px 5px;
+        transition: 0.2s;
+
+        height: 60px;
+        input {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            border: 1px solid $borderColor;
+            background-color: white;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+        }
+        label {
+            position: relative;
+            top: -35px;
+            transition: 0.2s;
+            z-index: 1;
+            pointer-events: none;
+            cursor: pointer;
+        }
+    }
+    &__input:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.507);
+    }
+   
+    &__input-theme {
+        margin-top: 10px;
+    }
+    .input__file-button:hover {
+        transform: scale(1);
+        transition: 0.3s;
+        box-shadow: 0px 0px 5px 2px rgba(54, 54, 54, 0.507);
+    }
+
+    .input__file-button-text {
+        line-height: 1;
+        margin-left: 20%;
+    }
+
+    .input__file-button {
+        transition: 0.3s;
+        text-align: center;
+        width: $w;
+        height: 40px;
+        // background: #1bbc9c00;
+        color: black;
+        font-size: 1rem;
+        font-weight: 700;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 0;
+    }
+}
+.content {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    color: black;
+}
+.test {
+    position: absolute;
+    left: 10%;
+}
